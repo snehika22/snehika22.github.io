@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Snehika Biyyala</title>
-  <link rel="icon" href="assets/images/ball.png" type="image/x-icon" />
+  <link rel="icon" href="https://img.icons8.com/emoji/48/heart-with-ribbon.png" type="image/png" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -233,68 +233,211 @@
     }
 
     /* About Section */
-    #about h3 {
-      margin: 20px 0;
-      font-weight: 400;
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-      justify-content: center;
-    }
-    .skills img {
-      width: 50px;
-      height: 50px;
-      transition: transform 0.3s;
-    }
-    .skills img:hover {
-      transform: scale(1.1);
-    }
+#about {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
 
-    /* Contact Section */
-    #contact {
-      background-color: var(--light-color);
-      border-radius: 15px;
-      padding: 60px 20px;
-    }
-    .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: space-between;
-    }
-    .contact-wrapper .box {
-      flex: 1 1 300px;
-      padding: 20px;
-    }
-    .contact-wrapper input,
-    .contact-wrapper textarea {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-    .contact-wrapper input:focus,
-    .contact-wrapper textarea:focus {
-      border-color: var(--accent-color);
-    }
-    .contact-wrapper button {
-      padding: 12px 25px;
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .contact-wrapper button:hover {
-      background-color: var(--accent-color);
-    }
+#about h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#about h3 {
+  margin: 20px auto;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+#about h2 {
+  margin-top: 40px;
+  font-size: 2rem;
+  color: #222;
+}
+
+.about-desc {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 0 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.skills img:hover {
+  transform: scale(1.15) rotate(2deg);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Section */
+#contact {
+  background-color:whitesmoke;
+  border-radius: 15px;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-items {
+  flex: 1 1 300px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.contact-item p {
+  margin: 2px 0;
+  color: #555;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  flex: 1 1 300px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contact-form button {
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px 20px;
+  background-color: white;
+  color: #000; /* Changed to black */
+  margin-top: 50px;
+}
+
+
+.footer .social-icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.footer .social-icons a {
+  color: #921a22;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.1);
+}
+
 
     /* Back to Top Button */
     .back-to-top {
@@ -307,7 +450,7 @@
       border-radius: 50%;
       display: none;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(249, 247, 247, 0.3);
       transition: transform 0.3s;
       z-index: 1000;
     }
@@ -315,29 +458,7 @@
       transform: scale(1.1);
     }
 
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 25px 20px;
-      background-color: var(--primary-color);
-      color: white;
-      margin-top: 50px;
-    }
-    .footer .social-icons {
-      margin: 15px 0;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .footer .social-icons a {
-      color: white;
-      font-size: 1.3rem;
-      text-decoration: none;
-      transition: transform 0.3s;
-    }
-    .footer .social-icons a:hover {
-      transform: scale(1.1);
-    }
+    
 
     /* Animations */
     @keyframes fadeInUp {
@@ -420,9 +541,10 @@ section.visible {
     <section id="home" class="hero">
       <div class="hero-text">
         <h1>Hi, I'm <span id="typed"></span></h1>
-        <p>I craft creative, responsive, and engaging web applications that deliver seamless user experiences.</p>
+        <p>I build responsive and interactive web pages that offer great user experiences.</p>
         <button>Hire Me</button>
-        <button onclick="window.open('assets/resume.pdf')">View Resume</button>
+        <button onclick="window.open('assets/documents/snehika__resume.pdf')" style="margin-left: 10px;">Download Resume</button>
+
       </div>
       <img src="https://picsum.photos/id/2/400/400" alt="Profile Image" />
     </section>
@@ -457,7 +579,7 @@ section.visible {
 <!-- Typed.js for dynamic typing -->
 <script>
     const typed = new Typed('#typed', {
-      strings: ["Snehika Biyyala", "a Full Stack Developer", "a Tech Enthusiast"],
+      strings: ["Snehika Biyyala."],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true
@@ -505,11 +627,6 @@ section.visible {
         <p>Custom websites and web applications tailored to your business needs using modern technologies.</p>
       </div>
       <div class="box">
-        <i class="fas fa-paint-brush fa-2x" style="color: var(--accent-color); margin-bottom: 10px;"></i>
-        <h3>UI/UX Design</h3>
-        <p>Clean and user-centric designs that ensure seamless user experience across all devices.</p>
-      </div>
-      <div class="box">
         <i class="fas fa-laptop-code fa-2x" style="color: var(--accent-color); margin-bottom: 10px;"></i>
         <h3>Responsive Design</h3>
         <p>Mobile-friendly websites that look great and perform well on any screen size or device.</p>
@@ -520,8 +637,13 @@ section.visible {
 
     <!-- About Section -->
     <section id="about" class="row">
-      <h1>About</h1>
-      <h3>I’m passionate about solving real-world challenges with code. I love creating full-stack solutions that are both efficient and visually appealing.</h3>
+        <h1>About</h1>
+        <h3>I’m passionate about solving real-world challenges with code. I love creating full-stack solutions that are both efficient and visually appealing.</h3>
+        
+        <p class="about-desc fade-in">
+            I'm a Front End Developer who enjoys turning ideas into delightful digital experiences. I specialize in crafting clean, responsive websites using HTML, CSS, JavaScript, and React. Whether I’m building from scratch or refining a design, I love combining creativity with logic to make web interfaces that are both intuitive and engaging. I also enjoy working in collaborative teams where ideas flow freely and everyone pushes each other to do their best work.
+          </p>
+          
       <h2>Skills</h2>
       <div class="skills">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
@@ -533,34 +655,68 @@ section.visible {
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="row">
-      <h1>Contact</h1>
-      <div class="contact-wrapper">
-        <div class="box">
-          <h3>Send a Message</h3>
-          <input type="text" placeholder="Enter Name" />
-          <input type="email" placeholder="Enter Email" />
-          <textarea rows="6" placeholder="Enter Message"></textarea>
-          <button>Send</button>
-        </div>
-        <div class="box">
-          <h3>Reach Out</h3>
-          <p><b>Address:</b> Hyderabad, India</p>
-          <p><b>Email:</b> sample@email.com</p>
-          <p><b>Phone:</b> +91 343 445 6789</p>
-        </div>
+ <!-- Contact Section -->
+<section id="contact">
+    <div class="contact container" style="padding: 40px; font-family: 'Segoe UI', sans-serif;">
+      <div>
+        <h1 class="section-title" style="text-align: center; font-size: 32px;">
+          Contact <span style="color: #3498db;">Info</span>
+        </h1>
       </div>
-    </section>
-
+  
+      <div class="contact-content" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 30px;">
+        
+        <!-- Contact Info -->
+        <div class="contact-items" style="flex: 1; min-width: 300px;">
+          <div class="contact-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+            <img src="https://img.icons8.com/color/50/000000/phone.png" alt="Phone Icon" />
+            <div>
+              <h3 style="margin: 0;">Phone</h3>
+              <p style="margin: 2px 0;">+91 9055500555</p>
+            </div>
+          </div>
+          <div class="contact-item" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+            <img src="https://img.icons8.com/color/50/000000/email.png" alt="Email Icon" />
+            <div>
+              <h3 style="margin: 0;">Email</h3>
+              <p style="margin: 2px 0;">snehikab22@email.com</p>
+            </div>
+          </div>
+          <div class="contact-item" style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://img.icons8.com/color/50/000000/marker.png" alt="Location Icon" />
+            <div>
+              <h3 style="margin: 0;">Address</h3>
+              <p style="margin: 2px 0;">Hyderabad, India</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Contact Form -->
+        <div class="contact-form" style="flex: 1; min-width: 300px;">
+          <h3 style="margin-bottom: 15px;">Send a Message</h3>
+          <form>
+            <input type="text" placeholder="Enter Name" required style="width: 100%; padding: 10px; margin-bottom: 10px;" />
+            <input type="email" placeholder="Enter Email" required style="width: 100%; padding: 10px; margin-bottom: 10px;" />
+            <textarea rows="5" placeholder="Enter Message" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea>
+            <button type="submit" style="padding: 10px 20px; background-color: #3498db; color: white; border: none; cursor: pointer;">Send</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+  
+  
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Snehika | <a href="#contact">Contact Me</a></p>
+        <h2 style="color: #61063476; font-family: 'Georgia', serif; font-style: italic;">Snehika Biyyala</h2>
       <div class="social-icons">
         <a href="https://github.com/snehika22" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/snehikabiyyala/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="mailto:snehikab22@email.com" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
+      <p>&copy; Copyright 2024 Snehika| All rights reserved.<a href="#contact">Contact Me</a></p>
     </footer>
 
     <!-- Back to Top Button -->
