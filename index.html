@@ -158,21 +158,22 @@
       margin-bottom: 30px;
     }
     .hero-text button {
-      padding: 12px 30px;
-      margin-right: 15px;
-      background-color: white;
-      color: var(--primary-color);
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .hero-text button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+  padding: 12px 30px;
+  margin-right: 15px;
+  background-color: white; /* Change background color to white */
+  color: var(--primary-color); /* Text color */
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hero-text button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
     .hero img {
       position: relative;
       z-index: 1;
@@ -438,6 +439,20 @@
   transform: scale(1.1);
 }
 
+.resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white; /* Button background */
+  color: white;              /* Text color */
+  border-radius: 20px;        /* Smooth corners */
+  text-decoration: none;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: white; /* Darker on hover */
+}
 
     /* Back to Top Button */
     .back-to-top {
@@ -539,15 +554,15 @@ section.visible {
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="hero-text">
-        <h1>Hi, I'm <span id="typed"></span></h1>
-        <p>I build responsive and interactive web pages that offer great user experiences.</p>
-        <button>Hire Me</button>
-        <button onclick="window.open('https://snehika22.github.io/your-repo-name/assets/documents/snehika__resume.pdf')" style="margin-left: 10px;">Download Resume</button>
-
-      </div>
-      <img src="https://picsum.photos/id/2/400/400" alt="Profile Image" />
-    </section>
+        <div class="hero-text">
+          <h1>Hi, I'm <span id="typed"></span></h1>
+          <p>I build responsive and interactive web pages that offer great user experiences.</p>
+          <button><b>Hire Me</b></button>
+          <a href="assets/documents/snehika__resume.pdf" class="cta resume-btn" style="margin-left: 10px;text-decoration-color:white;color: black" download>Download Resume</a>
+        </div>
+        <img src="https://picsum.photos/id/2/400/400" alt="Profile Image" />
+      </section>
+      
 <!-- Add AOS initialization and dark mode + Typed.js script -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
